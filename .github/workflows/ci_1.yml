@@ -5,4 +5,18 @@ jobs:
     runs-on: ubuntu-latest  
     steps: 
       - name: Hola mundo
+<<<<<<< HEAD
         run: echo 'Hola mundo'
+=======
+        run: echo 'Hola mundo'
+      - name: Public IP
+        id: ip
+        uses: haythem/public-ip@v1.3
+
+      - name: Print Public IP
+        run: |
+          echo ${{ steps.ip.outputs.ipv4 }}
+          echo ${{ steps.ip.outputs.ipv6 }}
+      - name: Get Release
+        run: lsb_release -a
+>>>>>>> bdb57019b65373464bf92cb9cff446e3648d1343
