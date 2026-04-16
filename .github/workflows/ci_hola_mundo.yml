@@ -1,0 +1,8 @@
+name: hola-mundo
+on: push
+jobs:
+  hola-mundo-node-jobs:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
