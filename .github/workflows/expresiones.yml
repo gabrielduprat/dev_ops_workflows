@@ -29,7 +29,7 @@ jobs:
       - name: Mostrar usuario
         run: echo ${{ github.actor }}
       - name: Retorna Ref
-        run: echo ${{ github.ref }} - ${{ github.repository }} - {{ github.event.issue.title}}
+        run: echo ${{ github.ref }} - ${{ github.repository }} - {{ github.event.issue.title }}
   menor:
     if: ${{ inputs.edad < 18 }}
     runs-on: ubuntu-latest
