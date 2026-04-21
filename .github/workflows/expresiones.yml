@@ -38,6 +38,8 @@ jobs:
       - run: echo ${{ steps.obtener_version.outputs.version }}
       - name: Mostrar variable de entorno
         run:  echo "Ambiente  - ${{ env.AMBIENTE }} - Region - ${{ env.REGION}}"
+      - name: Mostrar variable secrets
+        run: echo ${{ secrets.PASSWORD}}
   menor:
     if: ${{ inputs.edad < 18 }}
     runs-on: ubuntu-latest
