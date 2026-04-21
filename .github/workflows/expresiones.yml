@@ -37,7 +37,7 @@ jobs:
         run: echo "version=1.0.0" >> $GITHUB_OUTPUT
       - run: echo ${{ steps.obtener_version.outputs.version }}
       - name: Mostrar variable de entorno
-        run:  echo "Ambiente  - ${{ env.AMBIENTE }} - Region - ${{ env.REGION}}
+        run:  echo "Ambiente  - ${{ env.AMBIENTE }} - Region - ${{ env.REGION}}"
   menor:
     if: ${{ inputs.edad < 18 }}
     runs-on: ubuntu-latest
